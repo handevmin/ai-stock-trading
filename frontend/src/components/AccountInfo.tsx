@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { accountApi, marketApi } from '../services/api'
+import { accountApi } from '../services/api'
 import './AccountInfo.css'
 
 interface AccountBalance {

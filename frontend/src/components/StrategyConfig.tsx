@@ -109,6 +109,8 @@ function StrategyConfig() {
         description: selectedType.description,
         strategy_type: type,
         config: selectedType.default_config,
+        stock_selection_mode: formData.stock_selection_mode,
+        auto_selection_config: formData.auto_selection_config,
       })
     } else {
       setFormData({

@@ -15,12 +15,6 @@ interface RankingItem {
   market_cap?: number
 }
 
-interface RankingResponse {
-  market_code: string
-  sort_type?: string
-  rankings: RankingItem[]
-}
-
 function StockRanking() {
   const [activeTab, setActiveTab] = useState<'volume' | 'fluctuation' | 'market_cap'>('volume')
   const [rankings, setRankings] = useState<RankingItem[]>([])

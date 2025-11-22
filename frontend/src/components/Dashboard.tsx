@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import AccountInfo from './AccountInfo'
 import OrderHistory from './OrderHistory'
 import StrategyConfig from './StrategyConfig'

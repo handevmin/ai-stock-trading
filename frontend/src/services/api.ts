@@ -69,6 +69,8 @@ export const strategyApi = {
     description?: string
     strategy_type?: string
     config?: any
+    stock_selection_mode?: 'watchlist' | 'auto' | 'ranking'
+    auto_selection_config?: any
   }) => api.post('/api/strategy', data),
   updateStrategy: (id: number, data: any) => api.put(`/api/strategy/${id}`, data),
   deleteStrategy: (id: number) => api.delete(`/api/strategy/${id}`),

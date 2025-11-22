@@ -1,0 +1,251 @@
+.dashboard {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* 메인 네비게이션 */
+.main-nav {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.nav-container {
+  display: flex;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border-radius: 16px;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.nav-container::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+.nav-item:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.nav-item.active {
+  color: var(--text-primary);
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.25) 0%, 
+    rgba(37, 99, 235, 0.2) 100%);
+  box-shadow: 
+    0 0 0 2px rgba(59, 130, 246, 0.3),
+    0 4px 20px rgba(59, 130, 246, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    rgba(59, 130, 246, 0.8) 20%,
+    rgba(59, 130, 246, 1) 50%,
+    rgba(59, 130, 246, 0.8) 80%,
+    transparent 100%);
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+  animation: slideInBottom 0.3s ease-out;
+}
+
+@keyframes slideInBottom {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.nav-icon::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  background: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.nav-item.active .nav-icon {
+  background: rgba(59, 130, 246, 0.3);
+  transform: scale(1.15);
+  box-shadow: 
+    0 0 12px rgba(59, 130, 246, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.nav-item.active .nav-icon::before {
+  background: var(--accent-primary);
+  box-shadow: 
+    0 0 12px rgba(59, 130, 246, 0.8),
+    0 0 24px rgba(59, 130, 246, 0.4);
+  transform: scale(1.1);
+}
+
+/* 아이콘별 스타일 */
+.icon-account::before {
+  /* 원형 코인/돈 모양 */
+  clip-path: circle(50%);
+  border-radius: 50%;
+}
+
+.icon-orders::before {
+  /* 리스트/문서 모양 - 세로 줄이 있는 형태 */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 0% 20%, 0% 0%, 0% 40%, 100% 40%, 100% 60%, 0% 60%, 0% 80%, 100% 80%, 100% 100%, 0% 100%);
+}
+
+.icon-strategy::before {
+  /* 타겟/목표 모양 - 중앙 점과 동심원 */
+  clip-path: polygon(
+    50% 0%, 50% 20%, 80% 20%, 80% 50%, 100% 50%, 100% 0%
+  );
+  border-radius: 0;
+}
+
+.icon-strategy {
+  position: relative;
+}
+
+.icon-strategy::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-secondary);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.nav-item.active .icon-strategy::after {
+  background: var(--accent-primary);
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.8);
+  width: 8px;
+  height: 8px;
+}
+
+.icon-search::before {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform: rotate(45deg);
+}
+
+.icon-chart::before {
+  clip-path: polygon(0% 100%, 25% 50%, 50% 75%, 75% 25%, 100% 0%, 100% 100%);
+}
+
+.icon-ranking::before {
+  clip-path: polygon(0% 0%, 50% 0%, 50% 50%, 100% 50%, 100% 100%, 0% 100%);
+}
+
+.icon-watchlist::before {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.nav-label {
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+
+
+.tab-content {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .nav-item {
+    padding: 10px 16px;
+  }
+  
+  .nav-label {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    gap: 4px;
+    padding: 6px;
+  }
+  
+  .nav-item {
+    padding: 10px 14px;
+    gap: 8px;
+  }
+  
+  .nav-icon {
+    font-size: 16px;
+  }
+  
+  .nav-label {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,257 @@
+# ===========================================
+# Python / FastAPI 백엔드
+# ===========================================
+# Python 캐시
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# 가상 환경
+venv/
+env/
+ENV/
+.venv
+
+# 환경 변수 파일
+.env
+.env.local
+.env.*.local
+backend/.env
+backend/.env.local
+
+# 데이터베이스
+*.db
+*.sqlite
+*.sqlite3
+backend/trading.db
+backend/*.db
+
+# 로그 파일
+*.log
+logs/
+backend/logs/
+*.log.*
+
+# Python 타입 체크
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre 타입 체커
+.pyre/
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# ===========================================
+# Node.js / React 프론트엔드
+# ===========================================
+# 의존성
+node_modules/
+frontend/node_modules/
+
+# 빌드 결과물
+dist/
+build/
+frontend/dist/
+frontend/build/
+.vite/
+.vite-*
+
+# 환경 변수
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# 로그
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 패키지 매니저
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ===========================================
+# IDE 및 에디터
+# ===========================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ===========================================
+# 운영체제
+# ===========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===========================================
+# 배포 및 보안
+# ===========================================
+# AWS 키 파일
+*.pem
+keys/
+deploy/keys/
+*.key
+
+# 배포 정보
+deployment-info.txt
+connection-info.txt
+deploy/deployment-info.txt
+deploy/connection-info.txt
+
+# 설정 파일 (민감한 정보 포함)
+deploy/config.sh
+# 주의: config.sh는 배포에 필요하지만 Git에 커밋하지 마세요!
+# 대신 config.sh.example을 만들어서 템플릿으로 사용하세요
+
+# ===========================================
+# Docker
+# ===========================================
+# Docker 관련
+.dockerignore
+docker-compose.override.yml
+*.dockerfile.local
+
+# ===========================================
+# 기타
+# ===========================================
+# 임시 파일
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+
+# 압축 파일
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# 테스트 커버리지
+coverage/
+.nyc_output/
+.coverage
+htmlcov/
+
+# 프로파일링
+*.prof
+*.pstats
+
+# 캐시
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+# 런타임 데이터
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env.test
+.env.production
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
